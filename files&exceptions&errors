@@ -1,0 +1,128 @@
+1. ERRORS EXCEPTIONS:
+
+
+  *syntax erros ==> it occurs due to wrong syntax.
+  *Indentation error ==> space missing.
+  * Zero division error ==> Any number divided by zero.
+  * Module error ==> Including modulename wrong. like( math ==> mathematices)
+  * Type error ==> it occurs when you are concatenation string and integer.
+  * Logic error ==> It occurs due to logic( wrong operator)
+
+
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  2. EXCEPTION HANDLING:
+
+    * Handling the errors.
+    *There are 3 keywords:(try , except , finally)
+    *try ==> This block handles error in your code if any of it exists.
+    *except ==>This block gives the output that you want to show if your code is fault.
+    *finally ==> This block will executed in any case.
+
+
+
+
+Eg:
+a=2
+b=3
+try:
+    print(a/b)
+except:
+    print("Zero Division Error!")
+finally:
+    print("Continue the following prgm")
+    
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. File Handling(opening & closing):
+
+
+  *File ==> File is a container in computer for storing data.
+  * Data is stored stored permenantly.
+  *Types of files: text, binary.
+
+  *directory = specify the location
+  *modes ==> r,w,a,wt,wb,rb,rt
+  *BY default, file is opend in 'r' mode.
+
+  *Opening a file:
+    * open ==> returns a file handler.
+    * In order to perform any operation on file, we first open it.
+
+     *syntax:
+             f=open("filename")
+
+  * Closing a file:
+
+    *syntax:
+            f.close()
+
+
+
+
+  *There are 2 ways to open and close a file:
+
+    *1st way:
+
+            syntax:
+            
+            f=open("filename.txt","mode")
+            statements
+            f.close()
+
+
+
+
+    *2nd way:
+
+              * with open() method automatically close the file.
+
+              syntax:
+              with open("Filename","mode") as anyname:
+              statements
+
+
+
+* we checked whether file is opend or not?
+    f.closed()  ==> it will give True/False
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. READING THE DATA FROM A FILE:
+
+  *Reading  data from a file(whole file data)
+
+  Eg:
+f=open("myfile.txt","r")
+data_reading=f.read()                           ==> read() reads whole data.
+print(data_reading)
+f.close()
+
+
+
+*Reading data from a file(with particular no.of charaters we want)
+Eg:
+f=open("myfile.txt","r")
+data_reading=f.read(10)
+print(data_reading)
+f.close()
+
+
+
+*Reading data from a file(i want only single line of data)
+
+Eg:
+f=open("myfile.txt","r")
+data=f.readline()
+print(data)
+f.close()
+      
+
+* readlines() method combines data into a list
+
+Eg:
+f=open("myfile.txt","r")
+data=f.readlines()
+print(data)
+f.close()

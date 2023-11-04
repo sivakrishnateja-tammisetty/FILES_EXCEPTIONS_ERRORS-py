@@ -165,3 +165,51 @@ with open("myfile.txt","r") as f:
 
 
 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5. ADDING THE DATA TO A FILE:
+
+ *NOTE:
+      *when you are writing data into a file,the previous data will erase.
+      *when you write data into file,if you print data,it will return no.of characters you write into file
+
+
+Eg1:
+f=open("myfile.txt","w")
+data=f.write("Hello")
+print(data)//5
+f.close()
+
+
+*suppose if you want to see,what data you wrriten into file ,then you have to read it.
+
+f=open("myfile.txt","r")
+data=f.read()
+print(data)
+f.close()
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6. APPENDING THE DATA TO A FILE:
+
+ *when to write data into file with append mode,then it will data to previous data(not erase previous data).
+
+Eg:
+f=open("myfile.txt","w")
+data=f.write("Hello")
+print(data)//5
+f.close()
+f=open("myfile.txt","r")
+data=f.read()
+print(data) //Hello
+f.close()
+f=open("myfile.txt","a")
+data=f.write(" siva")
+print(data)//5
+f.close()
+f=open("myfile.txt","r")
+data=f.read()
+print(data) //Hello siva
+f.close()

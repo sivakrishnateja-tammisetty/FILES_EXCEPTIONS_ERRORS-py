@@ -213,3 +213,20 @@ f=open("myfile.txt","r")
 data=f.read()
 print(data) //Hello siva
 f.close()
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+7. READING AND ADDING THE DATA:
+
+ * r+ ===> write and read
+
+ Eg:
+ f=open("myfile.txt","r+")
+ writing_file=f.write("welcome")
+ print(writing_file) //7
+ f.close()
+ f=open("myfile.txt","r+")
+ reading_file=f.read()
+ print(reading_file)
+ f.close()

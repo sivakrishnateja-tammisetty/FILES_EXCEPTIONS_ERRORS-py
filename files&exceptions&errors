@@ -93,7 +93,7 @@ finally:
 
   *Reading  data from a file(whole file data)
 
-  Eg:
+  Eg1:
 f=open("myfile.txt","r")
 data_reading=f.read()                           ==> read() reads whole data.
 print(data_reading)
@@ -102,7 +102,7 @@ f.close()
 
 
 *Reading data from a file(with particular no.of charaters we want)
-Eg:
+Eg1:
 f=open("myfile.txt","r")
 data_reading=f.read(10)
 print(data_reading)
@@ -112,7 +112,7 @@ f.close()
 
 *Reading data from a file(i want only single line of data)
 
-Eg:
+Eg1:
 f=open("myfile.txt","r")
 data=f.readline()
 print(data)
@@ -121,8 +121,47 @@ f.close()
 
 * readlines() method combines data into a list
 
-Eg:
+Eg1:
 f=open("myfile.txt","r")
 data=f.readlines()
 print(data)
 f.close()
+
+
+
+
+
+* with open() method:
+
+
+Eg2:
+with open("myfile.txt","r") as f:
+ data_reading=f.read()                           ==> read() reads whole data.
+ print(data_reading)
+
+
+*Reading data from a file(with particular no.of charaters we want)
+Eg2:
+with open("myfile.txt","r") as f:
+ data_reading=f.read(10)
+ print(data_reading)
+
+
+*Reading data from a file(i want only single line of data)
+
+Eg2:
+with open("myfile.txt","r") as f:
+ data=f.readline()
+ print(data)
+
+
+
+* readlines() method combines data into a list
+
+Eg2:
+with open("myfile.txt","r") as f:
+ data=f.readlines()
+ print(data)
+
+
+

@@ -19,6 +19,11 @@
     *except ==>This block gives the output that you want to show if your code is fault.
     *finally ==> This block will executed in any case.
 
+  NOTE:
+  * type(exception) ->It will print type of rxception
+  *(exception.args)  -> exception arguments are stored in .args
+
+
 
 
 
@@ -31,6 +36,34 @@ except:
     print("Zero Division Error!")
 finally:
     print("Continue the following prgm")
+
+
+
+
+
+
+
+Eg3:
+
+a=5
+b=0
+try:
+    print(a/b)
+except Exception as e:
+    print(type(e))        //type of exception
+    print(e.args)         //exception arguments stored in .args
+    print(e)              //Directly it will print exception
+    print("Error,",e)
+finally:
+    print("Completed")
+
+
+o/p:
+<class 'ZeroDivisionError'>
+('division by zero',)
+division by zero
+Error, division by zero
+Completed
     
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

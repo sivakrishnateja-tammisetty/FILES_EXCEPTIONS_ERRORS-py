@@ -64,6 +64,31 @@ o/p:
 division by zero
 Error, division by zero
 Completed
+
+
+
+
+
+
+
+
+
+Eg:
+def divide(x,y):
+    if y==0:
+        raise ValueError("Cannot Divided with Zero!")
+    print(x/y)
+# Example of raising an exception
+try:
+    res=divide(10,0)
+except Exception as e:
+    print(f"Error: {e}")
+else:
+    print("Successfully completed!")
+
+
+
+Note:else block will execute only when no exception raised.
     
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
